@@ -6,49 +6,61 @@
 
 /*********************************************************************/
 
-// function palindrome(str) {
-//  let splitted = str.split("");
-//  let reversed = splitted.reverse("");
-//  let joined = reversed.join("");
-//  return joined.toLowerCase().replace(/[^0-9a-z]/gi, '') == str.toLowerCase().replace(/[^0-9a-z]/gi, '')
-// }
+function palindrome(str) {
+ let splitted = str.split("");
+ let reversed = splitted.reverse("");
+ let joined = reversed.join("");
+ return joined.toLowerCase().replace(/[^0-9a-z]/gi, '') == str.toLowerCase().replace(/[^0-9a-z]/gi, '')
+}
 
-// console.log(palindrome('Racecar'))
+console.log(palindrome('Racecar'))
 //I HAD TO SEARCH FOR HELP ON THIS ONE
 
 /***********************************************************************/
 
-// function sumArray(arr){
-//   let sum = 0;
-//   for(let i=0; i < arr.length; i++){
-//     sum += arr[i];
-//   }
-//   console.log(sum)
-// }
-//
-// sumArray([1,2,3])
+function sumArray(arr){
+  let sum = 0;
+  for(let i=0; i < arr.length; i++){
+    sum += arr[i];
+  }
+  console.log(sum)
+}
+
+sumArray([1,2,3])
 
 /********************************************************************** */
 
-// function checkPrime(num) {
-//
-//   if (num === 2) {
-//     return true;
-//   } else if (num > 1) {
-//     for (var i = 2; i < num; i++) {
-//
-//       if (num % i !== 0) {
-//         return true;
-//       } else if (num === i * i) {
-//         return false
-//       } else {
-//         return false;
-//       }
-//     }
-//   } else {
-//     return false;
-//   }
-//
-// }
-//
-// console.log(checkPrime(17));
+function checkPrime(num) {
+
+  if (num === 2) {
+    return true;
+  } else if (num > 1) {
+    for (var i = 2; i < num; i++) {
+
+      if (num % i !== 0) {
+        return true;
+      } else if (num === i * i) {
+        return false
+      } else {
+        return false;
+      }
+    }
+  } else {
+    return false;
+  }
+
+}
+
+console.log(checkPrime(17));
+
+/******************************************************************************* */
+
+function printPrimes() {
+  for (let i=0; i<100; i++){
+    if(checkPrime(i) === true){
+      console.log(i)
+    }
+  }
+}
+
+printPrimes()
